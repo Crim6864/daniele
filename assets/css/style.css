@@ -1,3 +1,6 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&family=Smooch+Sans:wght@300&display=swap');
+
 /* Asterisk to override default styles added by browsers */
 * {
     padding: 0;
@@ -12,10 +15,32 @@ body {
     min-height: 100vh;
 }
 
+h1, h2, h3 {
+    font-size: 180%;
+    text-shadow: 3px 3px 3px lightskyblue;
+    letter-spacing: 2px;
+    font-family: 'Oswald', sans-serif;
+}
+
+a {
+    letter-spacing: 2px;
+    font-size: 120%;
+    box-shadow: 3px 3px 5px lightblue;
+    margin: 20px auto;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+}
+
+p {
+    font-size: 120%;
+    letter-spacing: 1px;
+    margin: 20px auto;
+    font-family: 'Oswald', sans-serif;
+}
+
 /* Header */
 
 #photo {
-    border: 2px solid white;
     width: 200px;
     height: 200px;
     border-radius: 100%;
@@ -25,8 +50,6 @@ body {
 
 header {
     padding: 0 1rem;
-    position: fixed;
-    z-index: 99;
     width: 100%;
     box-shadow: 0 2px 2px black;
     justify-content: space-between;
@@ -34,27 +57,84 @@ header {
     text-align: center;
 }
 
-header h1 {
-    margin: 20px auto;
-}
-
-header h2 {
-    margin: 20px auto;
-}
+/* menu Styles */
 
 #menu {
     justify-content: space-between;
     list-style-type: none;
-    color: inherit;
     display: flex;
-    letter-spacing: 2px;
-}
-
-#menu a {
-    letter-spacing: 2px;
-    font-size: 120%;
+    margin: 20px auto;
+    padding-bottom: 10px;
 }
 
 #menu a:hover {
-    color: purple;
+    background-color: lightgreen;
+}
+
+main {
+    width: 98%;
+    display: block;
+    margin: 20px auto;
+}
+
+footer {
+    width: 100%;
+    margin: 20px auto;
+    text-align: center;
+    font-family: 'Oswald', sans-serif;
+    letter-spacing: 2px;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+    /* General styles */
+
+    h1, h2, h3, a, p {
+        font-size: 180%;
+    }
+    
+    /* Header styles */
+
+    header {
+        padding: 0 1rem;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    header h1 {
+        align-self: center;
+        flex-grow: 1;
+    }
+
+    header h2 {
+        align-self: center;
+        flex-grow: 1;
+    }
+
+    #navigation {
+        flex-grow: 1;
+        padding: 0 5rem;
+    }
+
+    main {
+        flex: 1 0 auto;
+        display: flex;
+        margin: 20px auto;
+        padding: 0 1rem;
+        justify-content: space-between;
+    }
+
+    .sidebar {
+        flex: 20%;
+        background-color: cyan;
+        margin: 20px auto;
+    }
+
+    .main-content {
+        flex: 70%;
+        background-color: lightpink;
+        margin: 20px auto;
+        padding: 0 1rem;
+    }
 }
