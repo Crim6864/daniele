@@ -15,7 +15,9 @@ body {
     min-height: 100vh;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
     font-size: 180%;
     text-shadow: 3px 3px 3px lightskyblue;
     letter-spacing: 2px;
@@ -29,6 +31,10 @@ a {
     margin: 20px auto;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
+}
+
+a:hover {
+    background-color: lightgreen;
 }
 
 p {
@@ -54,28 +60,41 @@ header {
     box-shadow: 0 2px 2px black;
     justify-content: space-between;
     align-items: baseline;
-    text-align: center;
 }
 
 /* menu Styles */
 
-#menu {
-    justify-content: space-between;
-    list-style-type: none;
-    display: flex;
-    margin: 20px auto;
-    padding-bottom: 10px;
+/* Style the navigation menu */
+.topnav {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
-#menu a:hover {
-    background-color: lightgreen;
+.topnav #menu {
+    display: none;
 }
 
-main {
-    width: 98%;
+.topnav a {
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 120%;
     display: block;
-    margin: 20px auto;
 }
+
+.topnav a.icon {
+    margin: 20px auto;
+    color: black;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0%;
+    box-shadow: 0 0 0;
+}
+
+
+/* Footer */
 
 footer {
     width: 100%;
@@ -90,32 +109,39 @@ footer {
 
     /* General styles */
 
-    h1, h2, h3, a, p {
+    h1,
+    h2,
+    h3,
+    a,
+    p {
         font-size: 180%;
     }
-    
+
     /* Header styles */
 
-    header {
+    .topnav {
         padding: 0 1rem;
         display: flex;
         flex-wrap: wrap;
     }
 
-    header h1 {
-        align-self: center;
-        flex-grow: 1;
+    .topnav #menu {
+        display: flex;
+        flex-direction: row;
     }
 
-    header h2 {
-        align-self: center;
-        flex-grow: 1;
+    .topnav a {
+        font-size: 160%;
+        text-align: center;
+        margin: 20px auto;
+        padding: 5;
+        position: relative;
     }
 
-    #navigation {
-        flex-grow: 1;
-        padding: 0 5rem;
+    .topnav a.icon {
+        display: none;
     }
+
 
     main {
         flex: 1 0 auto;

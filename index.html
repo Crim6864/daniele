@@ -8,23 +8,35 @@
 
     <!-- CSS Style Sheets -->
     <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!-- Java Scripts -->
+    <script type="text/javascript" src="/assets/scripts/scripts.js"></script>
   </head>
   <body>
     <header>
-      <div id="photo"></div>
-      <h1>Daniel Eriksson</h1>
-      <h2>Full Stack Software Developer</h2>
-      <nav id="navigation">
-        <ul id="menu">
-          <li><a href="/index.html">Home</a></li>
-          <li><a>About</a></li>
-          <li><a>Jobs</a></li>
-          <li><a>Downloads</a></li>
-        </ul>
-      </nav>
+    <!-- Top Navigation Menu -->
+    <div class="topnav">
+        <a href="/index.html" class="active">
+            <h1>Daniel Eriksson</h1>
+        </a>
+        <!-- Navigation links (hidden by default) -->
+        <div id="menu">
+            <a href="#news">Home</a>
+            <a href="#contact">About</a>
+            <a href="#about">Jobs</a>
+            <a href="#download">Downloads</a>
+        </div>
+        <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa-solid fa-bars"></i>
+        </a>
+    </div>
+
     </header>
     <main>
       <section class="sidebar">
+        <h2>Full Stack Software Developer</h2>
+        <div id="photo"></div>
         <p>Name: Daniel</p>
         <p>Age: 36</p>
         <p>City: Kil</p>
@@ -40,6 +52,7 @@
         </p>
       </section>
     </main>
+    <script src="https://kit.fontawesome.com/1b4f7b5728.js" crossorigin="anonymous"></script>
     <footer>
       <p>&copy; Daniele</p>
     </footer>
