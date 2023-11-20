@@ -28,8 +28,6 @@ h3 {
 a {
     letter-spacing: 2px;
     font-size: 120%;
-    box-shadow: 3px 3px 5px lightblue;
-    margin: 20px auto;
     text-decoration: none;
     font-family: 'Oswald', sans-serif;
 }
@@ -130,22 +128,21 @@ footer {
     /* Header styles */
 
     .topnav {
-        padding: 0 1rem;
         display: flex;
         flex-wrap: wrap;
+    }
+
+
+    .topnav a {
+        font-size: 180%;
+        text-align: center;
+        margin: 20px auto;
     }
 
     .topnav #menu {
         display: flex;
         flex-direction: row;
-    }
-
-    .topnav a {
-        font-size: 160%;
-        text-align: center;
         margin: 20px auto;
-        padding: 5;
-        position: relative;
     }
 
     .topnav a.icon {
@@ -162,14 +159,12 @@ footer {
     }
 
     .sidebar {
-        flex: 20%;
-        background-color: cyan;
+        flex: 30%;
         margin: 20px auto;
     }
 
     .main-content {
         flex: 70%;
-        background-color: lightpink;
         margin: 20px auto;
         padding: 0 1rem;
     }
