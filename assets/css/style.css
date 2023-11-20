@@ -94,11 +94,17 @@ header {
     box-shadow: 0 0 0;
 }
 
-/* Sidebar */
+/* Main Content */
+
+.main-content {
+    font-size: 130%;
+    margin: 20px auto;
+    text-align: center;
+}
 
 .main-content h1 {
-    font-size: 220%;
-    margin: 20px auto;
+    font-size: 180;
+    margin-bottom: 30px;
 }
 
 
