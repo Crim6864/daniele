@@ -1,3 +1,4 @@
+// Navigation icon script for mobile.
 function myFunction() {
     var x = document.getElementById("menu");
     if (x.style.display === "block") {
