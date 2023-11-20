@@ -98,6 +98,11 @@ header {
 
 /* Sidebar */
 
+.main-content h1 {
+    font-size: 220%;
+    margin: 20px auto;
+}
+
 
 /* Footer */
 
