@@ -22,6 +22,7 @@ h3 {
     text-shadow: 3px 3px 3px lightskyblue;
     letter-spacing: 2px;
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 
 a {
@@ -39,9 +40,10 @@ a:hover {
 
 p {
     font-size: 120%;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
     margin: 20px auto;
     font-family: 'Oswald', sans-serif;
+    text-align: center;
 }
 
 /* Header */
@@ -54,6 +56,8 @@ p {
     background: url('../images/cvfoto.webp') no-repeat center center/cover;
 }
 
+
+
 header {
     padding: 0 1rem;
     width: 100%;
@@ -64,7 +68,6 @@ header {
 
 /* menu Styles */
 
-/* Style the navigation menu */
 .topnav {
     width: 100%;
     overflow: hidden;
@@ -92,6 +95,8 @@ header {
     top: 0%;
     box-shadow: 0 0 0;
 }
+
+/* Sidebar */
 
 
 /* Footer */
