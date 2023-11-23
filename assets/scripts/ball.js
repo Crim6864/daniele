@@ -8,13 +8,14 @@ canvas.width = WIDTH;
 canvas.height = HEIGHT;
 canvas.style.background = "#123456";
 
-// Variables for the blocks
+// Variables for the blocks / game
 var blockArr = [],
     blockIndex = 0,
     numBlockCol = 7,
     numBlockRow = 4,
     colWidth = WIDTH / numBlockCol,
-    padding = colWidth / 4;
+    padding = colWidth / 4,
+    isGameOver;
 
 // Block Properties
 var blockProp = {
@@ -64,8 +65,8 @@ function Block(x, y, width, height, isShow) {
     this.isShow = isShow;
 }
 
-// Display the Blocks
-function DisplayBlocks() {
+// Display the Block
+function DisplayBlock() {
     blockArr.forEach((b) => {
         if (b.isShow) {
             context.beginPath();
@@ -113,7 +114,7 @@ Ball.prototype.drawBall = function () {
 };
 
 // Ball updates
-Ball.prototype.updateBall = function () {
+Ball.prototype.updateBall = function (playerObj) {
     this.x += this.xDirSpeed;
     this.y += this.yDirSpeed;
 
@@ -124,14 +125,37 @@ Ball.prototype.updateBall = function () {
     else if (this.x + this.radius > WIDTH) {
         this.xDirSpeed = -this.xDirSpeed;
     }
-    else if (this.y - this.radius < 0){
+    else if (this.y - this.radius < 0) {
         this.yDirSpeed = -this.yDirSpeed;
+    }
+
+    // Check Player Colision
+    if (this.x + this.radius > playerObj.x && this.x - this.radius < (playerObj.x + playerObj.width) && this.y + this.radius > (HEIGHT - 1.5 * padding)) {
+        this.yDirSpeed = -this.yDirSpeed;
+        this.y += this.yDirSpeed;
+        this.xDirSpeed += Math.floor(playerObj.xDirSpeed / 3) + 1;
+    }
+
+    // Check if there is no colision
+    if ((this.x + this.radius < playerObj.x || (this.x + this.radius) > (playerObj.x + playerObj.width)) && this.y + this.radius > HEIGHT) {
+        playerObj.lifeCount--;
+        if (playerObj.lifeCount <= 0) {
+            document.getElementById('gameover').innerHTML = 'Game Over!!!';
+            document.getElementById('liferemaining').innerHTML = playerObj.lifeCount;
+            isGameOver = true;
+        }
+        else {
+            this.x = WIDTH / 2;
+            this.y = HEIGHT / 2;
+            this.xDirSpeed = Math.random() < 0.5 ? 2 : -2;
+            this.yDirSpeed = Math.random() < 0.5 ? 2 : -3;
+        }
     }
 };
 
 // Draws the Game
 function drawGame() {
-    DisplayBlocks();
+    DisplayBlock();
     player.drawPlayer();
     ball.drawBall();
 }
@@ -141,10 +165,13 @@ function updateGame() {
     ball.updateBall();
 }
 
-// Ball animation
+// Ball animation / check game
 function animateGame() {
+    context.clearRect(0, 0, WIDTH, HEIGHT);
     drawGame();
-    updateGame();
+    if (!isGameOver && !isLevelCompleted) {
+        updateGame();
+    }  
 
     requestAnimationFrame(animateGame);
 }
