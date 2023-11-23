@@ -1,5 +1,5 @@
 // Navigation script for mobile.
-function myFunction() {
+function myMenu() {
     var x = document.getElementById("menu");
     if (x.style.display === "block") {
         x.style.display = "none";
