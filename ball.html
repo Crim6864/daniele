@@ -16,6 +16,7 @@
 
     <!-- Java Scripts -->
     <script src="/assets/scripts/main.js"></script>
+    <script src="/assets/scripts/ball.js"></script>
 </head>
 
 <body>
@@ -28,9 +29,10 @@
             <!-- Navigation links (hidden by default) -->
             <div id="menu">
                 <a href="/index.html">Hem</a>
-                <a href="/portfolio.html" class="active">Portfolio</a>
+                <a href="/portfolio.html">Portfolio</a>
                 <a href="/jobs.html">Nuvarande Projekt</a>
                 <a href="/downloads.html">Nedladdningar</a>
+                <a href="/ball.html" class="active">Spel</a>
             </div>
             <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
@@ -62,8 +64,7 @@
         <section class="main-content">
             <h2>Ball Breakout Game!</h2>
             <!-- Ball break out game  -->
-            <canvas id="canvas"></canvas>
-            <script src="/assets/scripts/ball.js"></script>
+            <canvas id="board"></canvas>
         </section>
     </main>
     <script src="https://kit.fontawesome.com/1b4f7b5728.js" crossorigin="anonymous"></script>
