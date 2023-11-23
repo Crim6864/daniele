@@ -22,7 +22,18 @@ var blockProp={
     h:padding
 }
 
+// Creating the Player
+var playerProp={
+    x:(WIDTH/2-colWidth/2),
+    y:(HEIGHT-1.5*padding),
+    w:colWidth,
+    h:padding
+}
+
 InitializeBlocks();
+
+// New player
+var player=new Player(playerProp.x, playerProp.y, playerProp.w, playerProp.h);
 
 // Initialize the blocks
 function InitializeBlocks() {
@@ -55,9 +66,28 @@ function DisplayBlocks(){
     });
 }
 
+// Player function
+function Player(x, y, width, height){
+    this.x = x;
+    this.y = y;
+    this.width = width;
+    this.height = height;
+    this.lifeCount=3; // How many lifes you have
+    this.xDirSpeed=0;
+}
+
+// Draw the Player
+Player.prototype.drawPlayer=function(){
+    context.beginPath();
+    context.fillStyle='#9EE117';
+    context.fillRect(this.x, this.y, this.width, this.height);
+    context.closePath();
+}
+
 // Draws the Game
 function drawGame(){
     DisplayBlocks();
+    player.drawPlayer();
 }
 
 drawGame();
