@@ -94,6 +94,10 @@ header {
     box-shadow: 0 0 0;
 }
 
+.spela {
+    display: none;
+}
+
 /* Main Content */
 
 .main-content {
@@ -154,6 +158,10 @@ footer {
     .topnav a.icon {
         display: none;
     }
+
+        .spela {
+            display: flex;
+        }
 
 
     main {
