@@ -63,7 +63,7 @@ It is tested thrue validators and on chrome.
 
 - Lighthouse on chrome
 
-  [Lighthouse](assets/images/lightde.png)
+  ![Lighthouse](assets/images/lightde.png)
 
 ### Unfixed Bugs
 
