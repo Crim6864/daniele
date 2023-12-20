@@ -1,192 +1,67 @@
-/* Google Font */
-@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@300&family=Smooch+Sans:wght@300&display=swap');
+/* Google Fonts */
 
-/* Asterisk to override default styles added by browsers */
-* {
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300&family=Oswald:wght@200;300;400;500;600;700&family=Smooch+Sans:wght@300&display=swap');
+
+/*-------------------------------------------------------------- Colours */
+
+.bg-color-name-title {
+    background-color: #676767;
 }
 
-/* General styling */
-
-body {
-    display: block;
-    min-height: 100vh;
+.ui-menu-color-home {
+    background-color: #e67e22;
 }
 
-h1,
-h2,
-h3 {
-    font-size: 180%;
-    text-shadow: 3px 3px 3px lightskyblue;
-    letter-spacing: 2px;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
+.ui-menu-color-resume {
+    background-color: #9b59b6;
 }
 
-a {
-    letter-spacing: 2px;
-    font-size: 120%;
-    text-decoration: none;
-    font-family: 'Oswald', sans-serif;
+.ui-menu-color-contact {
+    background-color: #3498db;
 }
 
-a:hover {
-    background-color: lightgreen;
+.ui-menu-color-download {
+    background-color: #525252;
 }
 
-p {
-    font-size: 120%;
-    letter-spacing: 2px;
-    margin: 20px auto;
-    font-family: 'Oswald', sans-serif;
-    text-align: center;
-}
-
-/* Header */
-
-#photo {
-    width: 200px;
-    height: 200px;
-    border-radius: 100%;
-    margin: 20px auto;
-    background: url('../images/cvfoto.webp') no-repeat center center/cover;
-}
-
-
+/*-------------------------------------------------------------- Heading */
 
 header {
-    padding: 0 1rem;
-    width: 100%;
-    box-shadow: 0 2px 2px black;
-    justify-content: space-between;
-    align-items: baseline;
+    margin: 0;
 }
 
-/* menu Styles */
-
-.topnav {
-    width: 100%;
-    overflow: hidden;
-    position: relative;
+.heading {
+    margin-left: 50px;
 }
 
-.topnav #menu {
-    display: none;
+.logo {
+    background: url("../images/cvfoto.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 360px;
+    transition: all .5s ease-in-out;
+    -moz-transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease-in-out;
 }
 
-.topnav a {
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: 120%;
-    display: block;
-}
-
-.topnav a.icon {
-    margin: 20px auto;
-    color: black;
-    display: block;
-    position: absolute;
-    right: 0;
-    top: 0%;
-    box-shadow: 0 0 0;
-}
-
-.spela {
-    display: none;
-}
-
-/* Main Content */
-
-.main-content {
-    font-size: 130%;
-    margin: 20px auto;
-    text-align: center;
-}
-
-.main-content h1 {
-    font-size: 180%;
-    margin-bottom: 30px;
-}
-
-
-/* Footer */
-
-footer {
-    width: 100%;
-    margin: 20px auto;
-    text-align: center;
+.name {
     font-family: 'Oswald', sans-serif;
-    letter-spacing: 2px;
+    font-weight: 200;
+    font-size: 46px;
+    margin-top: 50px;
+    color: #fff;
 }
 
+.title {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    margin-top: 28px;
+    margin-bottom: 90px;
+    color: #fff;
+}
 
-@media screen and (min-width: 1024px) {
-
-    /* General styles */
-
-    h1,
-    h2,
-    h3,
-    a,
-    p {
-        font-size: 180%;
-    }
-
-    /* Header styles */
-
-    .topnav {
-        display: flex;
-        flex-wrap: wrap;
-    }
-
-
-    .topnav a {
-        font-size: 180%;
-        text-align: center;
-        margin: 20px auto;
-    }
-
-    .topnav #menu {
-        display: flex;
-        flex-direction: row;
-        margin: 20px auto;
-    }
-
-    .topnav a.icon {
-        display: none;
-    }
-
-        .spela {
-            display: flex;
-        }
-
-
-    main {
-        flex: 1 0 auto;
-        display: flex;
-        margin: 20px auto;
-        padding: 0 1rem;
-        justify-content: space-between;
-    }
-
-    .sidebar {
-        flex: 30%;
-        margin: 20px auto;
-    }
-
-    .main-content {
-        flex: 70%;
-        margin: 20px auto;
-        padding: 0 1rem;
-    }
-
-    #board {
-        background-color: black;
-        border-top: 5px solid skyblue;
-        border-left: 5px solid skyblue;
-        border-right: 5px solid skyblue;
-    }
+.list-inline-item:not(:last-child) {
+    margin: 0;
 }
